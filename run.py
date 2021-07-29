@@ -38,6 +38,7 @@ def decide_function():
         if validate_decide_function(user_choice):
             print(f'You selected {user_choice}')
             break
+    checks_output_of_userInput(user_choice)
 
 def validate_decide_function(values):
     """
@@ -86,39 +87,65 @@ def validate_user_inputs(values):
 
 def add_entry_to_income_worksheet(inputs):
     """
-    checks whether date is already in worksheet or not
+    Adds entry to income worksheet
     """
     income.append_row(inputs)
-    print('Updating worksheet...\n')
+    print('Updating income worksheet...\n')
     print('Worksheet updated...\n')
 
+def add_entry_to_expense_worksheet(inputs):
     """
-    If date is already in worksheet add columns to end of row if not create new row
+    Adds entry to expense worksheet
     """
+    expense.append_row(inputs)
+    print('Updating expense worksheet...\n')
+    print('Worksheet updated...\n')
 
+
+
+def checks_output_of_userInput(value):
     """
     checks whether income or expense which inputs two new columns to the worksheet
     """
+    
+    print('print value: ', value)
+    inputs = user_inputs()
+    if value == '1':
+        return add_entry_to_income_worksheet(inputs)
+        print('updating income')
+    elif value == '2':
+        return add_entry_to_expense_worksheet(inputs)
+        print('updating Expenses')
 
+
+def sum_current_months_income():
     """
-    Sums all entries for each month
+    Checks all info in colum 1 to se if it matches current fate time, if it does 
+    Sums all income entries for this month and returns a total.
+    iterate over each entry to compare to current month, year then return value under amount colum and add to others
     """
 
+"""
+    Sums all expense entries for this month
     """
+"""
     finds disposable income by finding the difference for income and expense of comparable date
     """
-
-    """
+"""
     finds average disposable income
     """
-
-    """
+"""
     outputs average disposable income
     """
 
+def main():
+    """
+    runs the main code
+    """
+    decide_function()
 
-decide_function()
 
-inputs = user_inputs()
 
-add_entry_to_income_worksheet(inputs)
+
+main()
+
