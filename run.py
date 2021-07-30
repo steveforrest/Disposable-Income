@@ -22,8 +22,15 @@ expense = SHEET.worksheet('Expense')
 income_data = income.get_all_values()
 expense_data = expense.get_all_values()
 
-# print('income', income_data)
-# print('expense', expense_data)
+list_of_dicts = income.get_all_records()
+#print(list_of_dicts, '\n')
+#income1 = income_data.col_values(1)
+#print(income1)
+#values_list = income.col_values('Income')(1)
+#print(values_list)
+
+#print(f'income', income_data)
+#print('expense', expense_data)
 
 def decide_function():
     """
@@ -32,8 +39,9 @@ def decide_function():
     while True:
         user_choice = input("""    If you would like to enter a new income entry please type 1 and press enter
     If you would like to enter a new expense entry please type 2 and press enter
-    If you would like to see the disposable income for the latest month press 3 and then enter
-    If you would like to see the average monthly dispoable income please press 4 and then enter\n"""
+    If you would like to see the total disposable income press 3 and then enter
+    If you would like to see the disposable income for the latest month press 4 and then enter
+    If you would like to see the average monthly dispoable income please press 5 and then enter\n"""
         )
         if validate_decide_function(user_choice):
             print(f'You selected {user_choice}')
@@ -45,9 +53,9 @@ def validate_decide_function(values):
     Validate whether a number is of 1 2 3 or 4 is given only
     """
     try:
-        if (int(values) < 1 or int(values) > 4):
+        if (int(values) < 1 or int(values) > 5):
             raise ValueError(
-                f"Please enter a number between 1 and 4, you entered {values}"
+                f"Please enter a number between 1 and 5, you entered {values}"
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
@@ -59,7 +67,6 @@ def user_inputs():
     """
     user inputs date
     """
-    # when = str(datetime.now().date())
     
     day = datetime.now()
     day =+ day.month,day.year 
@@ -109,34 +116,74 @@ def checks_output_of_userInput(value):
     """
     
     print('print value: ', value)
-    inputs = user_inputs()
     if value == '1':
-        return add_entry_to_income_worksheet(inputs)
+        inputs = user_inputs()
         print('updating income')
+        return add_entry_to_income_worksheet(inputs)
     elif value == '2':
-        return add_entry_to_expense_worksheet(inputs)
+        inputs = user_inputs()
         print('updating Expenses')
+        return add_entry_to_expense_worksheet(inputs)
+    elif value == '3':
+        print('getting disposable income')
+        return total_disposable()
 
 
-def sum_current_months_income():
+def sum_income():
     """
     Checks all info in colum 1 to se if it matches current fate time, if it does 
     Sums all income entries for this month and returns a total.
     iterate over each entry to compare to current month, year then return value under amount colum and add to others
+    get all results returned as a list 
     """
+    income_list = income_data
+    amount_income = 0
+    #print(income_list)
+    length = len(income_list)
+    for item in range(length):
+        amount_income += int(income_list[item][2])
+    #print(amount_income, 'amount of income')
+    return amount_income
+      
 
-"""
+
+def sum_expense():
+    """
     Sums all expense entries for this month
     """
-"""
+    expense_list = expense_data
+    amount_expense = 0
+    #print(expense_list)
+    length = len(expense_list)
+    for item in range(length):
+        amount_expense += int(expense_list[item][2])
+#    print(amount_expense, 'amount of expense')
+    return amount_expense
+
+def total_disposable():
+    """
     finds disposable income by finding the difference for income and expense of comparable date
     """
-"""
-    finds average disposable income
-    """
-"""
-    outputs average disposable income
-    """
+    disposable = sum_income() - sum_expense()
+    print(disposable)
+
+def sum_income_for_currentmonth():
+    
+    income_list = income_data
+    amount_income = 0
+    #print(income_list)
+    length = len(income_list)
+    for item in range(length):
+        amount_income += int(income_list[item][2])
+    #print(amount_income, 'amount of income')
+    return amount_income
+
+#"""
+# finds average disposable income
+#"""
+#"""
+ #   outputs average disposable income
+  #  """
 
 def main():
     """
@@ -145,7 +192,7 @@ def main():
     decide_function()
 
 
-
-
 main()
-
+#sum_current_months_income()
+#sum_current_months_expense()
+#total_disposable()
