@@ -32,6 +32,9 @@ list_of_dicts = income.get_all_records()
 #print(f'income', income_data)
 #print('expense', expense_data)
 
+now = datetime.now()
+date = now.month,now.year
+
 def decide_function():
     """
     Choose new entry, output disposable income or output average disposable income
@@ -68,9 +71,9 @@ def user_inputs():
     user inputs date
     """
     
-    day = datetime.now()
-    day =+ day.month,day.year 
-    when = str(day)
+    now = datetime.now()
+    date = now.month,now.year
+    when = str(date)
     entry = input('Please enter a name of the entry: \n')
     while True:
         amount = input('Please enter an amount for your entry: \n')
@@ -167,15 +170,27 @@ def total_disposable():
     disposable = sum_income() - sum_expense()
     print(disposable)
 
-def sum_income_for_currentmonth():
-    
+def sum_income_for_date():
+    """
+    get the income list and pass through the lists where the [0] index is the same as todays date
+    """
     income_list = income_data
     amount_income = 0
     #print(income_list)
     length = len(income_list)
+   
     for item in range(length):
-        amount_income += int(income_list[item][2])
+        print('ITEM:', income_list[item])
+        if income_list[item][0] == str(date):
+            amount_income += int(income_list[item][2])
+    
+    print(date, 'todays date')
+    print(income_list[item][0], 'date of incomes\n')
+
+    print(amount_income, 'amount income')
+
     #print(amount_income, 'amount of income')
+    #print(amount_income)
     return amount_income
 
 #"""
@@ -191,8 +206,9 @@ def main():
     """
     decide_function()
 
+sum_income_for_date()
 
-main()
-#sum_current_months_income()
-#sum_current_months_expense()
+#main()
+#sum_dates_income()
+#sum_dates_expense()
 #total_disposable()
