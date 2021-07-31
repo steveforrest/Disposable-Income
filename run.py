@@ -201,6 +201,13 @@ def get_number_of_months_income():
     """
     returns how many different months there are in the income worksheet
     """
+     income_list = income_data
+    amount_income = 0
+    length = len(income_list)
+    for item in range(length):
+        if income_list[item][0] == str(date):
+            amount_income += int(income_list[item][2])
+    return amount_income
     
     
 def get_number_of_months_expense():
@@ -226,7 +233,9 @@ def main():
 #disposable_for_this_month()
 #sum_income_for_date()
 #sum_expense_for_date()
-main()
+#main()
 #sum_dates_income()
 #sum_dates_expense()
 #total_disposable()
+
+disposable_for_this_month()
