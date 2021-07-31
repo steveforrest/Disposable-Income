@@ -130,6 +130,9 @@ def checks_output_of_userInput(value):
     elif value == '3':
         print('getting disposable income')
         return total_disposable()
+    elif value == '4':
+        print('getting disposable income for current month')
+        return disposable_for_this_month()
 
 
 def sum_income():
@@ -176,23 +179,33 @@ def sum_income_for_date():
     """
     income_list = income_data
     amount_income = 0
-    #print(income_list)
     length = len(income_list)
-   
     for item in range(length):
-        print('ITEM:', income_list[item])
         if income_list[item][0] == str(date):
             amount_income += int(income_list[item][2])
-    
-    print(date, 'todays date')
-    print(income_list[item][0], 'date of incomes\n')
-
-    print(amount_income, 'amount income')
-
-    #print(amount_income, 'amount of income')
-    #print(amount_income)
+    print(amount_income, 'sum_income_for_date')
     return amount_income
 
+def sum_expense_for_date():
+    """
+    get the income list and pass through the lists where the [0] index is the same as todays date
+    """
+    expense_list = expense_data
+    amount_expense = 0
+    #print(income_list)
+    length = len(expense_list)
+   
+    for item in range(length):
+        if expense_list[item][0] == str(date):
+            amount_expense += int(expense_list[item][2])
+    print(amount_expense, 'from sum_expense_for_date')
+    return amount_expense
+
+def disposable_for_this_month():
+    current_dsiposable = sum_income_for_date() - sum_expense_for_date()
+
+   
+    print(current_dsiposable)
 #"""
 # finds average disposable income
 #"""
@@ -206,9 +219,10 @@ def main():
     """
     decide_function()
 
-sum_income_for_date()
-
-#main()
+#disposable_for_this_month()
+#sum_income_for_date()
+#sum_expense_for_date()
+main()
 #sum_dates_income()
 #sum_dates_expense()
 #total_disposable()
