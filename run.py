@@ -47,7 +47,6 @@ def decide_function():
     If you would like to see the average monthly dispoable income please press 5 and then enter\n"""
         )
         if validate_decide_function(user_choice):
-            print(f'You selected {user_choice}')
             break
     checks_output_of_userInput(user_choice)
 
@@ -117,8 +116,6 @@ def checks_output_of_userInput(value):
     """
     checks whether income or expense which inputs two new columns to the worksheet
     """
-    
-    print('print value: ', value)
     if value == '1':
         inputs = user_inputs()
         print('updating income')
@@ -144,11 +141,9 @@ def sum_income():
     """
     income_list = income_data
     amount_income = 0
-    #print(income_list)
     length = len(income_list)
     for item in range(length):
         amount_income += int(income_list[item][2])
-    #print(amount_income, 'amount of income')
     return amount_income
       
 
@@ -159,11 +154,9 @@ def sum_expense():
     """
     expense_list = expense_data
     amount_expense = 0
-    #print(expense_list)
     length = len(expense_list)
     for item in range(length):
         amount_expense += int(expense_list[item][2])
-#    print(amount_expense, 'amount of expense')
     return amount_expense
 
 def total_disposable():
@@ -183,7 +176,6 @@ def sum_income_for_date():
     for item in range(length):
         if income_list[item][0] == str(date):
             amount_income += int(income_list[item][2])
-    print(amount_income, 'sum_income_for_date')
     return amount_income
 
 def sum_expense_for_date():
@@ -192,13 +184,11 @@ def sum_expense_for_date():
     """
     expense_list = expense_data
     amount_expense = 0
-    #print(income_list)
     length = len(expense_list)
    
     for item in range(length):
         if expense_list[item][0] == str(date):
             amount_expense += int(expense_list[item][2])
-    print(amount_expense, 'from sum_expense_for_date')
     return amount_expense
 
 def disposable_for_this_month():
@@ -206,9 +196,23 @@ def disposable_for_this_month():
 
    
     print(current_dsiposable)
+
+def get_number_of_months_income():
+    """
+    returns how many different months there are in the income worksheet
+    """
+    
+    
+def get_number_of_months_expense():
+    """
+    returns how many different months there are in the income worksheet
+    """
+
 #"""
-# finds average disposable income
+#finds average disposable income
 #"""
+
+
 #"""
  #   outputs average disposable income
   #  """
