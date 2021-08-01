@@ -101,7 +101,8 @@ def add_entry_to_income_worksheet(inputs):
     income.append_row(inputs)
     print('Updating income worksheet...\n')
     print('Worksheet updated...\n')
-
+    main()
+    
 def add_entry_to_expense_worksheet(inputs):
     """
     Adds entry to expense worksheet
@@ -109,6 +110,7 @@ def add_entry_to_expense_worksheet(inputs):
     expense.append_row(inputs)
     print('Updating expense worksheet...\n')
     print('Worksheet updated...\n')
+    main()
 
 
 
@@ -165,6 +167,7 @@ def total_disposable():
     """
     disposable = sum_income() - sum_expense()
     print(disposable)
+    main()
 
 def sum_income_for_date():
     """
@@ -185,7 +188,6 @@ def sum_expense_for_date():
     expense_list = expense_data
     amount_expense = 0
     length = len(expense_list)
-   
     for item in range(length):
         if expense_list[item][0] == str(date):
             amount_expense += int(expense_list[item][2])
@@ -193,31 +195,42 @@ def sum_expense_for_date():
 
 def disposable_for_this_month():
     current_dsiposable = sum_income_for_date() - sum_expense_for_date()
-
-   
     print(current_dsiposable)
+    main()
 
 def get_number_of_months_income():
     """
     returns how many different months there are in the income worksheet
     """
-     income_list = income_data
-    amount_income = 0
-    length = len(income_list)
-    for item in range(length):
-        if income_list[item][0] == str(date):
-            amount_income += int(income_list[item][2])
-    return amount_income
-    
-    
+    how_many_months = int(1)
+    length = len(income_data)
+    i = 0
+    income_data[i][0]
+    while i < (length - 1):
+        if (str(income_data[i][0])) != (str(income_data[i + 1][0])):
+           how_many_months += int(1)
+        i = i + 1
+    print(how_many_months)
+
 def get_number_of_months_expense():
     """
     returns how many different months there are in the income worksheet
     """
+    how_many_months = int(1)
+    length = len(expense_data)
+    i = 0
+    expense_data[i][0]
+    while i < (length - 1):
+        if (str(expense_data[i][0])) != (str(expense_data[i + 1][0])):
+           how_many_months += int(1)
+        i = i + 1
+    print(how_many_months)
 
-#"""
-#finds average disposable income
-#"""
+def more_month_income_or_expense():
+    """
+    finds average disposable income
+    """
+    
 
 
 #"""
@@ -238,4 +251,6 @@ def main():
 #sum_dates_expense()
 #total_disposable()
 
-disposable_for_this_month()
+#disposable_for_this_month()
+get_number_of_months_income()
+get_number_of_months_expense()
