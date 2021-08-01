@@ -132,6 +132,9 @@ def checks_output_of_userInput(value):
     elif value == '4':
         print('getting disposable income for current month')
         return disposable_for_this_month()
+    elif value == '5':
+        print()
+        return get_average_disposable_income()
 
 
 def sum_income():
@@ -210,7 +213,7 @@ def get_number_of_months_income():
         if (str(income_data[i][0])) != (str(income_data[i + 1][0])):
            how_many_months += int(1)
         i = i + 1
-    print(how_many_months)
+    return how_many_months
 
 def get_number_of_months_expense():
     """
@@ -224,13 +227,27 @@ def get_number_of_months_expense():
         if (str(expense_data[i][0])) != (str(expense_data[i + 1][0])):
            how_many_months += int(1)
         i = i + 1
-    print(how_many_months)
+    return how_many_months
 
 def more_month_income_or_expense():
     """
+    determines which worksheet ahs the most months in it the income or expense and returns the amount from that one
+    """
+    higher_valeu = 0
+    if (get_number_of_months_income()) >= (get_number_of_months_expense()):
+        #print('vale from income month', get_number_of_months_income())
+        return get_number_of_months_income()
+    else:
+        #print('vale from expense month', get_number_of_months_expense())
+        return get_number_of_months_expense()
+
+def get_average_disposable_income():
+    """
     finds average disposable income
     """
-    
+    average_disposable = (sum_income() - sum_expense()) / more_month_income_or_expense()
+    print(average_disposable)
+    main()
 
 
 #"""
@@ -246,11 +263,13 @@ def main():
 #disposable_for_this_month()
 #sum_income_for_date()
 #sum_expense_for_date()
-#main()
+main()
 #sum_dates_income()
 #sum_dates_expense()
 #total_disposable()
 
 #disposable_for_this_month()
-get_number_of_months_income()
-get_number_of_months_expense()
+#get_number_of_months_income()
+#get_number_of_months_expense()
+#more_month_income_or_expense()
+#get_average_disposable_income()
