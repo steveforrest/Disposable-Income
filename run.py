@@ -44,8 +44,8 @@ def decide_function():
         user_choice = input("""    If you would like to enter a new income entry please type 1 and press enter
     If you would like to enter a new expense entry please type 2 and press enter
     If you would like to see the total disposable income press 3 and then enter
-    If you would like to see the disposable income for the latest month press \n 4 and then enter
-    If you would like to see the average monthly dispoable income please press \n 5 and then enter\n"""
+    If you would like to see the disposable income for the latest month press \n    4 and then enter
+    If you would like to see the average monthly dispoable income please press \n   5 and then enter\n"""
         )
         if validate_decide_function(user_choice):
             break
