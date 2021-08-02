@@ -41,9 +41,9 @@ def decide_function():
     """
     print('Please ensure you have clicked into the terminal before you try to input.')
     while True:
-        user_choice = input("""    If you would like to enter a new income entry please type 1 and press enter
-    If you would like to enter a new expense entry please type 2 and press      enter
-    If you would like to see the total disposable income press 3 and then       enter
+        user_choice = input("""    If you would like to enter a new income entry please type 1 and press           enter
+    If you would like to enter a new expense entry please type 2 and press          enter
+    If you would like to see the total disposable income press 3 and then           enter
     If you would like to see the disposable income for the latest month press       4 and then enter
     If you would like to see the average monthly dispoable income please press      5 and then enter\n"""
         )
