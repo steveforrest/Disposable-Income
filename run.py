@@ -126,21 +126,25 @@ def checks_output_of_userInput(value):
     inputs two new columns to the worksheet
     """
     if value == '1':
-        print('You chose to update this months income')
+        print(
+            'You chose to update this months income')
         inputs = user_inputs()
         print('updating income')
         return add_entry_to_income_worksheet(inputs)
     elif value == '2':
-        print('You chose to update this months expense')
+        print(
+            'You chose to update this months expense')
         inputs = user_inputs()
         print('updating Expenses')
         return add_entry_to_expense_worksheet(inputs)
     elif value == '3':
-        print('You chose to view your total disposable income')
+        print(
+            'You chose to view your total disposable income')
         print('Your disposable income is:')
         return total_disposable()
     elif value == '4':
-        print('You chose to view your disposable income for thsi month')
+        print(
+            'You chose to view your disposable income for thsi month')
         print('Your disposable income for current month is: ')
         return disposable_for_this_month()
     elif value == '5':
