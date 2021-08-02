@@ -23,21 +23,15 @@ income_data = income.get_all_values()
 expense_data = expense.get_all_values()
 
 list_of_dicts = income.get_all_records()
-#print(list_of_dicts, '\n')
-#income1 = income_data.col_values(1)
-#print(income1)
-#values_list = income.col_values('Income')(1)
-#print(values_list)
-
-#print(f'income', income_data)
-#print('expense', expense_data)
 
 now = datetime.now()
-date = now.month,now.year
+date = now.month, now.year
+
 
 def decide_function():
     """
-    Choose new entry, output disposable income or output average disposable income
+    Choose new entry, output disposable income or output average
+    disposable income
     """
     print('Please ensure you have clicked into the terminal before you try to input.')
     while True:
