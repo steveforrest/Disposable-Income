@@ -39,12 +39,13 @@ def decide_function():
     """
     Choose new entry, output disposable income or output average disposable income
     """
+    print('Please ensure you have clicked into the terminal before you try to input.')
     while True:
         user_choice = input("""    If you would like to enter a new income entry please type 1 and press enter
     If you would like to enter a new expense entry please type 2 and press enter
     If you would like to see the total disposable income press 3 and then enter
-    If you would like to see the disposable income for the latest month press 4 and then enter
-    If you would like to see the average monthly dispoable income please press 5 and then enter\n"""
+    If you would like to see the disposable income for the latest month press \n 4 and then enter
+    If you would like to see the average monthly dispoable income please press \n 5 and then enter\n"""
         )
         if validate_decide_function(user_choice):
             break
@@ -119,21 +120,26 @@ def checks_output_of_userInput(value):
     checks whether income or expense which inputs two new columns to the worksheet
     """
     if value == '1':
+        print('You chose to update this months income')
         inputs = user_inputs()
         print('updating income')
         return add_entry_to_income_worksheet(inputs)
     elif value == '2':
+        print('You chose to update this months expense')
         inputs = user_inputs()
         print('updating Expenses')
         return add_entry_to_expense_worksheet(inputs)
     elif value == '3':
-        print('getting disposable income')
+        print('You chose to view your total disposable income')
+        print('Your disposable income is:')
         return total_disposable()
     elif value == '4':
-        print('getting disposable income for current month')
+        print('You chose to view your disposable income for thsi month')    
+        print('Your disposable income for current month is: ')
         return disposable_for_this_month()
     elif value == '5':
-        print()
+        print('You chose to view your average disposable income over all of the months')        
+        print('Your average disposable income is:')
         return get_average_disposable_income()
 
 
@@ -243,9 +249,10 @@ def more_month_income_or_expense():
 
 def get_average_disposable_income():
     """
-    finds average disposable income
+    finds average disposable income rounded to 2 decimal place
     """
     average_disposable = (sum_income() - sum_expense()) / more_month_income_or_expense()
+    average_disposable = str(round(average_disposable, 2))
     print(average_disposable)
     main()
 
