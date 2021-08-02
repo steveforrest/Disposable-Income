@@ -1,45 +1,74 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Disposable income calculator
 
-Welcome steveforrest,
+## Contents
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+* [Contents](#contents)
+* [Name](#name)
+* [Description](#description)
+* [Features](#features)
+* [Game Play](#game-play)
+* [Testing](#testing)
+* [Technologies](#technologies)
+* [Deployment](#deployment)
+* [Future Additions](#future-additions)
 
-## Gitpod Reminders
+## Name
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Description
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Features
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
+## How to Use the app
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+1. There is a rules button that allows you to have a modal open displaying an image with the rules on and a video with rules on.
+2. To play the game you simplay click on one of the buttons you will then be displayed with you have won lost or drew and the score is incremented.
+3. close the modal and play again util either side gets 5 points the game is then over and you can reset the game.
 
-## Updates Since The Instructional Video
+## Testing
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+How I have tested the code:
+* 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Bugs
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+1. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Unresolved Bugs
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* The rules modal is unresponsive and on mobile devices does not look very good, it requires scrolling to the right in order to close down.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Validation
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+*
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Technologies
 
---------
+* [HTML](https://en.wikipedia.org/wiki/HTML)
 
-Happy coding!
+
+## Deployment
+
+1. 
+
+### Cloning
+
+How to clone this repositiory. [How to clone a github repositry](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
+
+* On GitHub go to the main page of the Repository.
+* Above the list of files click the code button with the drop-down arrow.
+* To clone the repository using HTTPS, under "Clone with HTTPS", click on the clipboard.
+* Open the Git Bash terminal.
+* Change the current working directory to the location where you want the cloned directory.
+* Type git clone, and then paste the URL you copied earlier from step 3.
+* Press Enter to create your local clone.
+
+## Future Additions
+
+
+## Citations
+
+* [
