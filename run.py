@@ -45,7 +45,7 @@ def decide_function():
         press 3 and then enter
         If you would like to see the disposable income for the
         latest month press 4 and then enter
-        If you would like to see the average monthly dispoable
+        If you would like to see the average monthly disposable
         income please press 5 and then enter\n
         """)
         if validate_decide_function(user_choice):
@@ -222,6 +222,9 @@ def sum_expense_for_date():
 
 
 def disposable_for_this_month():
+    """
+    Gets the amount of total income by deducting the summed income from the summed expenses
+    """
     current_dsiposable = sum_income_for_date() - sum_expense_for_date()
     print(current_dsiposable)
     main()
