@@ -92,7 +92,7 @@ def validate_user_inputs(values):
     try:
         if not(int(values) or float(values)):
             raise ValueError(
-              f"Please enter a number, you entered {values}"
+              f'Please enter a number, you entered {values}'
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
@@ -144,13 +144,13 @@ def checks_output_of_userInput(value):
         return total_disposable()
     elif value == '4':
         print(
-            'You chose to view your disposable income for thsi month')
+            'You chose to view your disposable income for this month')
         print('Your disposable income for current month is: ')
         return disposable_for_this_month()
     elif value == '5':
         print(
-            """You chose to view your average disposable
-               income over all of the months""")
+            'You chose to view your average disposable\n'
+            'income over all of the months')
         print('Your average disposable income is:')
         return get_average_disposable_income()
 
@@ -223,7 +223,8 @@ def sum_expense_for_date():
 
 def disposable_for_this_month():
     """
-    Gets the amount of total income by deducting the summed income from the summed expenses
+    Gets the amount of total income by deducting
+    the summed income from the summed expenses
     """
     current_dsiposable = sum_income_for_date() - sum_expense_for_date()
     print(current_dsiposable)

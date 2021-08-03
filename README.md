@@ -22,7 +22,7 @@ The app is deployed through heroku and requires very limited input to use. The a
 
 ## Logic diagram
 
-![Flow diagram of logic](Assets/Images/logic-diagram.png)
+![Flow diagram of logic](Assets/Images/flow_ diagram_logic.png)
 
 ## Features
 
@@ -59,7 +59,7 @@ How I have tested the code:
 #### Solved bugs
 
 * Initially the code was needing to be ran each time and not looping back - this was solved by calling the main() function each time the last run had finished
-* There were several instances where my code was not working and this was cause by type errors these were resolved by ensuring each bit of data were the exact same type.
+* There were several instances where my code was not working and this was caused by type errors these were resolved by ensuring each bit of data were the exact same type.
 
 ## Technologies
 
@@ -105,11 +105,13 @@ How to clone this repository. [How to clone a github repository](https://docs.gi
 
 ## Future Additions
 
-There is plenty of room for additional functions that can be added later such as displaying all items that have been paid for this month or allowing the user to choose an alternative month to display different data.
-This could also be put into nicer front end using HTML CSS and JS in order to get the data in such a way that would give a better UX and UI.
-I also plan on enabling the app to create new worksheets for different users and enabling the user to enter their user name in order to get each persons personal data out, at the moment this is a standalone (one user) app.
+There is plenty of room for additional functions that can be added later such as:
+* Displaying all items that have been paid for this month or allowing the user to choose an alternative month to display different data.
+* This could also be put into nicer front end using HTML CSS and JS in order to get the data in such a way that would give a better UX and UI.
+* I also plan on enabling the app to create new worksheets for different users and enabling the user to enter their user name in order to get each persons personal data out, at the moment this is a standalone (one user) app.
 
 ## Citations
 
 * I required to limit my out put to a float with 2 decimal place on one of the functions and used [This link](https://stackoverflow.com/questions/20457038/how-to-round-to-2-decimals-with-python) to a stack overflow article
 * I had trouble getting my while loop to work so i checked on [W3Schools](https://www.w3schools.com/python/python_while_loops.asp)
+* I used the multiline on strings my decide_function() as i believed this would make the code dry. I found the best way to do this from [W3Schools Python Multi Line Strings](https://www.w3schools.com/python/gloss_python_multi_line_strings.asp)
