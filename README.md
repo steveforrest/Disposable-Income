@@ -3,7 +3,7 @@
 ## Contents
 
 * [Contents](#contents)
-* [Name](#name)
+* [Top](#Disposable-Income)
 * [Description](#description)
 * [Logic](#Logic-diagram)
 * [Features](#features)
@@ -13,9 +13,7 @@
 * [Deployment](#deployment)
 * [Future Additions](#future-additions)
 
-## Name
-
-Disposable Income 
+## Disposable Income
 
 ## Description
 
