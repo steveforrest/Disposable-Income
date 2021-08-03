@@ -161,13 +161,16 @@ def checks_output_of_userInput(value):
         print(
             'You chose to view your last 5\n'
             'income entries')
-        print('Your previous 5 incomes entered are:')
+        print('Your previous 5 incomes entered, \n'
+              ' most recent displayed first are:')
         return return_last_5_income_entries()
     elif value == '7':
         print(
             'You chose to view your last 5\n'
             'income entries')
-        print('Your previous 5 incomes entered are:')
+        print(
+            'Your previous 5 expenses entered,\n'
+            ' most recent displayed first are:')
         return return_last_5_expense_entries()
 
 
