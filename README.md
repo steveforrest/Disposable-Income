@@ -24,7 +24,7 @@ The app is deployed through heroku and requires very limited input to use. The a
 
 ## Logic diagram
 
-(Assets/Images/logic-diagram.png)
+![Flow diagram of logic](Assets/Images/logic-diagram.png)
 
 ## Features
 
