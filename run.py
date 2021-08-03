@@ -46,7 +46,11 @@ def decide_function():
         If you would like to see the disposable income for the
         latest month press 4 and then enter
         If you would like to see the average monthly disposable
-        income please press 5 and then enter\n
+        income please press 5 and then enter
+        If you would like to see the last 5 entries you entered
+        for income please press 6 and then enter
+        If you would like to see the last 5 entries you entered
+        for expense please press 7 and then enter\n
         """)
         if validate_decide_function(user_choice):
             break
@@ -58,9 +62,9 @@ def validate_decide_function(values):
     Validate whether a number is of 1 2 3 or 4 is given only
     """
     try:
-        if (int(values) < 1 or int(values) > 5):
+        if (int(values) < 1 or int(values) > 7):
             raise ValueError(
-                f"Please enter a number between 1 and 5, you entered {values}"
+                f"Please enter a number between 1 and 7, you entered {values}"
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
@@ -153,6 +157,18 @@ def checks_output_of_userInput(value):
             'income over all of the months')
         print('Your average disposable income is:')
         return get_average_disposable_income()
+    elif value == '6':
+        print(
+            'You chose to view your last 5\n'
+            'income entries')
+        print('Your previous 5 incomes entered are:')
+        return return_last_5_income_entries()
+    elif value == '7':
+        print(
+            'You chose to view your last 5\n'
+            'income entries')
+        print('Your previous 5 incomes entered are:')
+        return return_last_5_expense_entries()
 
 
 def sum_income():
@@ -281,6 +297,30 @@ def get_average_disposable_income():
     avg_disposable = diff / more_month_income_or_expense()
     avg_disposable = str(round(avg_disposable, 2))
     print(avg_disposable)
+    main()
+
+
+def return_last_5_income_entries():
+    """
+    Prints out a list of the last 5 entries in
+    income with the date name and month
+    """
+    i = -1
+    while i > -6:
+        print(income_data[i])
+        i -= 1
+    main()
+
+
+def return_last_5_expense_entries():
+    """
+    Prints out a list of the last 5 entries in
+    expense with the date name and month
+    """
+    i = -1
+    while i > -6:
+        print(expense_data[i])
+        i -= 1
     main()
 
 
