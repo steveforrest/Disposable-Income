@@ -41,12 +41,13 @@ def decide_function():
         💲  To enter a new income entry please type 1 and press enter
         💲  To enter a new expense entry please type 2 and press enter
         💲  To see the total disposable income press 3 and then enter
-        💲  To see the disposable income for the latest month press 4 and then enter
-        💲  To see the average monthly disposable 
+        💲  To see the disposable income for the latest
+            month press 4 and then enter
+        💲  To see the average monthly disposable
             income please press 5 and then enter
-        💲  To see the last 5 entries you entered for 
+        💲  To see the last 5 entries you entered for
             income please press 6 and then enter
-        💲  To see the last 5 entries you entered for 
+        💲  To see the last 5 entries you entered for
             expense please press 7 and then enter\n
         """)
         if validate_decide_function(user_choice):
