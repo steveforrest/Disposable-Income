@@ -41,6 +41,8 @@ The app has 7 feature:-
 There are validators to check firstly that the user only enter a number between 1 and 5 and that when the user enters an amount they enter either an int or a float.
 The last two features were added once all the program had been built as an after though and so will not appear on the logic flow chart.
 
+Due to the front end of how this project is deployed I have opted to use Emojis to help the user identify different options and where the outcomes are returned. To help the user identyfy the differences between different options where there is more than one to choose from i have opted to use a green dollar sign which stands out nicely on the frontend and is relevant to the purpose of the app. For the return statemnets i have opted to use blue gems for the reasons as the green dollar signs.
+
 ## How to Use the app
 
 1. When the app finishes loading read the instructions the first part is the most important as it tells you to ensure you are clicked inside the terminal
