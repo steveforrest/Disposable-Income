@@ -24,16 +24,22 @@ The app is deployed through heroku and requires very limited input to use. The a
 
 ![Flow diagram of logic](Assets/Images/flow_ diagram_logic.png)
 
+* Two functions were added after the program was passed the planning stage please see  features section for details.
+
+
 ## Features
 
-The app has 5 feature:-
+The app has 7 feature:-
 1. Input a new income, this will find todays date taking the month and year storing as a tuple, the user then inputs a name for the entry and a corresponding amount. These then get added to the spread sheet in a new row.
 2. Input a new expense, this will find todays date taking the month and year storing as a tuple, the user then inputs a name for the entry and a corresponding amount. These then get added to the spread sheet in a new row.
 3. The user is able to return the total for the income minus the total for the expense.
 4. The user is able to return the total for the income for the current month minus the total for the expense for the current month
 5. The user is able to return the total amount from option 3 divided by the average different amount of month held within the spread sheet. this is checked by comparing the two different sheets to see which has more months
+6. The user is able to return the last 5 entries in the income spread sheet by pressing 6
+7. The user is able to return the last 5 entries in the expense spread sheet by pressing 7
 
 There are validators to check firstly that the user only enter a number between 1 and 5 and that when the user enters an amount they enter either an int or a float.
+The last two features were added once all the program had been built as an after though and so will not appear on the logic flow chart.
 
 ## How to Use the app
 
@@ -115,3 +121,4 @@ There is plenty of room for additional functions that can be added later such as
 * I required to limit my out put to a float with 2 decimal place on one of the functions and used [This link](https://stackoverflow.com/questions/20457038/how-to-round-to-2-decimals-with-python) to a stack overflow article
 * I had trouble getting my while loop to work so i checked on [W3Schools](https://www.w3schools.com/python/python_while_loops.asp)
 * I used the multiline on strings my decide_function() as i believed this would make the code dry. I found the best way to do this from [W3Schools Python Multi Line Strings](https://www.w3schools.com/python/gloss_python_multi_line_strings.asp)
+* I required to know how to get the last entry from a list [How to obtain the last index of a list?](https://stackoverflow.com/questions/7889820/how-to-obtain-the-last-index-of-a-list)

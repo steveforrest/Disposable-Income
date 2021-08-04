@@ -37,7 +37,7 @@ def decide_function():
         'Ensure you have clicked into the terminal before you try to input.')
     while True:
         user_choice = input("""
-        If you would like to enter a new income entry please
+        🎶If you would like to enter a new income entry please
         type 1 and press enter
         If you would like to enter a new expense entry please
         type 2 and press enter
@@ -129,6 +129,7 @@ def checks_output_of_userInput(value):
     checks whether income or expense which
     inputs two new columns to the worksheet
     """
+    # I chose to use if/else instead of switch statement as it would be cleaner
     if value == '1':
         print(
             'You chose to update this months income')
