@@ -37,7 +37,7 @@ def decide_function():
         'Ensure you have clicked into the terminal before you try to input.')
     while True:
         user_choice = input("""
-        🎶If you would like to enter a new income entry please
+        🎶  If you would like to enter a new income entry please
         type 1 and press enter
         If you would like to enter a new expense entry please
         type 2 and press enter
