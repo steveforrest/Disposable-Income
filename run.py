@@ -130,40 +130,40 @@ def checks_output_of_userInput(value):
     # I chose to use if/else instead of switch statement as it would be cleaner
     if value == '1':
         print(
-            '💎 You chose to update this months income')
+            '💎  You chose to update this months income')
         inputs = user_inputs()
         print('updating income')
         return add_entry_to_income_worksheet(inputs)
     elif value == '2':
         print(
-            '💎 You chose to update this months expense')
+            '💎  You chose to update this months expense')
         inputs = user_inputs()
         print('updating Expenses')
         return add_entry_to_expense_worksheet(inputs)
     elif value == '3':
         print(
-            '💎 You chose to view your total disposable income')
+            '💎  You chose to view your total disposable income')
         print('Your disposable income is:')
         return total_disposable()
     elif value == '4':
         print(
-            '💎 You chose to view your disposable income for this month')
+            '💎  You chose to view your disposable income for this month')
         print('Your disposable income for current month is: ')
         return disposable_for_this_month()
     elif value == '5':
         print(
-            '💎 You chose to view your average disposable\n'
+            '💎  You chose to view your average disposable\n'
             'income over all of the months')
         print('Your average disposable income is:')
         return get_average_disposable_income()
     elif value == '6':
         print(
-            '💎 Your previous 5 incomes entered, \n'
+            '💎  Your previous 5 incomes entered, \n'
             ' most recent displayed first are:')
         return return_last_5_income_entries()
     elif value == '7':
         print(
-            '💎 Your previous 5 expenses entered,\n'
+            '💎  Your previous 5 expenses entered,\n'
             ' most recent displayed first are:')
         return return_last_5_expense_entries()
 
