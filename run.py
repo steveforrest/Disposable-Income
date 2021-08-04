@@ -37,20 +37,14 @@ def decide_function():
         'Ensure you have clicked into the terminal before you try to input.')
     while True:
         user_choice = input("""
-        🎶  If you would like to enter a new income entry please
-        type 1 and press enter
-        If you would like to enter a new expense entry please
-        type 2 and press enter
-        If you would like to see the total disposable income
-        press 3 and then enter
-        If you would like to see the disposable income for the
-        latest month press 4 and then enter
-        If you would like to see the average monthly disposable
-        income please press 5 and then enter
-        If you would like to see the last 5 entries you entered
-        for income please press 6 and then enter
-        If you would like to see the last 5 entries you entered
-        for expense please press 7 and then enter\n
+        Please choose an option from the list below:
+        💲  To enter a new income entry please type 1 and press enter
+        💲  To enter a new expense entry please type 2 and press enter
+        💲  To see the total disposable income press 3 and then enter
+        💲  To see the disposable income for the latest month press 4 and then enter
+        💲  To see the average monthly disposable income please press 5 and then enter
+        💲  To see the last 5 entries you entered for income please press 6 and then enter
+        💲  To see the last 5 entries you entered for expense please press 7 and then enter\n
         """)
         if validate_decide_function(user_choice):
             break
