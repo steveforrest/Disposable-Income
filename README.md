@@ -66,6 +66,8 @@ How I have tested the code:
 
 #### Existing Bugs
 
+* Upon final testing of the app iI have seen that the last entry does not display when requested from option 6 or 7. When rerunning the app the last entry will now display.
+
 #### Solved bugs
 
 * Initially the code was needing to be ran each time and not looping back - this was solved by calling the main() function each time the last run had finished
