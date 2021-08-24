@@ -22,7 +22,7 @@ The app is deployed through heroku and requires very limited input to use. The a
 
 ## Logic diagram
 
-<img src="Assets/Images/flow_ diagram_logic.png" width ="500">
+<img src="./assets/images/flow_ diagram_logic.png" width ="500">
 
 * Two functions were added after the program was passed the planning stage please see  features section for details.
 
