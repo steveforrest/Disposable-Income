@@ -57,7 +57,7 @@ def decide_function():
 
 def validate_decide_function(values):
     """
-    Validate whether a number is of 1 2 3 or 4 is given only
+    Validate whether a number is of 1 to 7 is given only
     """
     try:
         if (int(values) < 1 or int(values) > 7):
