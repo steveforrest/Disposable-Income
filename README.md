@@ -15,6 +15,8 @@
 
 ## Disposable Income
 
+<img src="assets/images/responsive.png" width="90%">
+
 ## Description
 
 This app is designed to allow somebody to track their disposable income by allowing them to add money they have gained or spent. They will be able to see how much money they have left in total, for that month or on average. 
@@ -22,7 +24,7 @@ The app is deployed through heroku and requires very limited input to use. The a
 
 ## Logic diagram
 
-<img src="./assets/images/flow_ diagram_logic.png" width ="500">
+<img src="./assets/images/flow_ diagram_logic.png" width ="90%">
 
 * Two functions were added after the program was passed the planning stage please see  features section for details.
 
