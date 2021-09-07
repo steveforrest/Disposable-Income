@@ -252,7 +252,8 @@ def get_number_of_months_income():
     length = len(income_data)
     i = 0
     income_data[i][0]
-    month_not_matched = (str(income_data[i][0])) != (str(income_data[i + 1][0]))
+    month_not_matched = (str(income_data[i][0])) != \
+        (str(income_data[i + 1][0]))
     while i < (length - 1):
         if (month_not_matched):
             how_many_months += int(1)
